@@ -2,7 +2,7 @@ import { PayloadAction, createAsyncThunk, createSelector, createSlice } from "@r
 import { RootState } from "../store";
 import { TUser } from "../../Users-homework";
 
-export const fetchUsersList = createAsyncThunk("usersList/fetch", async () => {
+export const fetchUsersList = createAsyncThunk("", async () => {
   const response = await fetch("http://localhost:3004/users");
   const data = await response.json();
   return data;
